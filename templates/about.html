@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>yt4u</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{url_for('static', filename='assets/img/ninja.png')}}" rel="icon">
+  <link href="{{url_for('static', filename='assets/img/ninja.png')}}" rel="python">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='assets/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">
+
+  <link href="{{url_for('static', filename='assets/css/main.css')}}" rel="stylesheet">
+</head>
+
+<body>
+  {% include 'construct-page/header.html' %}
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row gy-4 d-flex justify-content-between">
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h2 data-aos="fade-up">Youtube Video Downloader</h2>
+          <p data-aos="fade-up" data-aos-delay="100">Adalah ide Python Final Project TK01 dari kelompok GEN - RP (Galuh,
+            Eldiva, Naufal -
+            Rangga, Paska). Ide ini didapat dari observasi beberapa topik mengenai Python Automation yang dikembangkan
+            menjadi object oriented
+            menggunakan Flask, bertujuan untuk men-download video dari Youtube dengan format mp4 dengan beberapa pilihan
+            resolusi.
+          </p>
+          <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="col-lg-3 col-6">
+              <div class="stats-item text-center w-100 h-100">
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+              <div class="stats-item text-center w-100 h-100">
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+              <div class="stats-item text-center w-100 h-100">
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+              <div class="stats-item text-center w-100 h-100">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-5 order-1 order-lg-2 yutub" data-aos="zoom-out">
+          <img src="{{url_for('static', filename='assets/img/ninja.png')}}" class="img-fluid mb-3 mb-lg-0" alt="">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <section id="featured-services" class="featured-services">
+      <div class="container"></div>
+      <div class="row gy-4"></div>
+
+      <!-- ======= About Us Section ======= -->
+      <section id="about" class="about pt-0">
+        <div class="container" data-aos="fade-up">
+
+          <div class="row gy-4">
+            <div class="col-lg-6 position-relative align-self-start order-lg-last order-first">
+              <img src="{{url_for('static', filename='assets/img/Lemon.jpg')}}" class="img-fluid" alt="">
+              <a href="https://www.youtube.com/watch?v=l2UiY2wivTs" class="glightbox play-btn"></a>
+            </div>
+            <div class="col-lg-6 content order-last  order-lg-first">
+              <h3>About Us</h3>
+              <p>
+                GEN-RP adalah kelompok Python Final Project yang terdiri dari Eldiva Tegar Imananda, Paska Parahita,
+                Galuh Ratna Widya Sari,
+                Rangga Ramadhan, dan Naufal Arieq Wira Pradana.
+              </p>
+              <ul>
+                <li data-aos="fade-up" data-aos-delay="100">
+                  <i class="bi bi-braces"></i>
+                  <div>
+                    <h5>Kenapa Memilih Ide Youtube Video Downloader?</h5>
+                    <p>Kami memilih topik ini sebagai projek akhir Python karena sudah termasuk pada tema automation dan
+                      diperkirakan sangat berguna bagi
+                      orang-orang yang hendak mendengarkan musik lewat Youtube tanpa iklan, tanpa membuka Youtube
+                      sehingga dapat memudahkan untuk membuat playlist pribadi.</p>
+                  </div>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-envelope-exclamation"></i>
+                  <div>
+                    <h5>Kendala yang dihadapi Selama Mengerjakan Projek?</h5>
+                    <p>Pastinya ada error dan juga malfunction dari setiap fitur yang disajikan, memang projek ini belum
+                      sesempurna web converter pada umumnya,
+                      paling tidak bisa digunakan untuk menambah pengalaman dalam merancang web GUI yang memiliki fungsi
+                      yang kompleks.
+                    </p>
+                  </div>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <div>
+                    <h5>Harapan ke depan projek?</h5>
+                    <p>Harapannya dapat diterapkan ke masa mendatang bukan hanya projeknya tpi juga proses dalam
+                      merancang, error handling, pencarian topik dan
+                      kerja sama tim bisa diterapkan kapanpun, dimanapun setelah Kami lulus.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ======= Testimonials Section ======= -->
+      <section id="testimonials" class="testimonials">
+        <div class="container">
+
+          <div class="slides-1 swiper" data-aos="fade-up">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="{{url_for('static', filename='assets/img/testimonials/Eldiva.jpg')}}"
+                    class="testimonial-img" alt="">
+                  <h3>Eldiva Tegar Imananda</h3>
+                  <h4>Project Manager</br></h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Don't be reckless
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="{{url_for('static', filename='assets/img/testimonials/Paska.jpg')}}" class="testimonial-img"
+                    alt="">
+                  <h3>Paska Parahita</h3>
+                  <h4>Backend Developer</h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    I can see everything you don't see.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="{{url_for('static', filename='assets/img/testimonials/Galuh.jpg')}}" class="testimonial-img"
+                    alt="">
+                  <h3>Galuh Ratna Widya Sari</h3>
+                  <h4>Frontend Developer</h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Miaw, miaw, miaw, miaw, miaw.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="{{url_for('static', filename='assets/img/testimonials/Rangga.png')}}"
+                    class="testimonial-img" alt="">
+                  <h3>Rangga Ramadhan</h3>
+                  <h4>Backend Programmer</h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    If we never try, how do we know?
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="{{url_for('static', filename='assets/img/testimonials/Naufal.jpg')}}"
+                    class="testimonial-img" alt="">
+                  <h3>Naufal Arieq Wira Pradana</h3>
+                  <h4>Frontend Programmer</h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Stress nugas? Ngegame aja.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- === Jeda === -->
+      <section id="faq" class="faq">
+        <div class="container" data-aos="fade-up">
+          <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-10">
+            </div>
+          </div>
+
+        </div>
+      </section><!-- End Frequently Asked Questions Section -->
+  </main>
+
+  {% include 'construct-page/footer.html' %}
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{{url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/vendor/purecounter/purecounter_vanilla.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/vendor/aos/aos.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/vendor/php-email-form/validate.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+
+</body>
+
+</html>

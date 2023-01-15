@@ -1,0 +1,13 @@
+{% extends 'construct-page/base-page.html' %}
+
+<!-- ======= Hero Section ======= -->
+{% block form_hero %}
+
+<!-- Form Download from Link -->
+<form action="{{ url_for('searchTitle') }}" method="POST" class="form-search d-flex align-items-stretch mb-3"
+  data-aos="fade-up" data-aos-delay="200">
+  <input type="text" name="judul" class="form-control" value id="txt-url" placeholder="Masukkan Judul Video atau Apapun">
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+{% endblock %}

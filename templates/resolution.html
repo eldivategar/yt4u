@@ -1,0 +1,195 @@
+{% extends 'construct-page/resolution-page.html' %}
+
+{% block error %}
+{% if error %}
+<div class="alert alert-success" data-aos="fade-up" data-aos-delay="400" role="alert">
+  <strong>
+    <center>Maaf ada kesalahan men-download data. Refresh dan coba lagi. <i class="far fa-smile-beam"></i></center>
+  </strong>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block logic %}
+<section class="thumbnail">
+  <div class="container" data-aos="fade-up" class="img-fluid" style="text-align: center;">
+    <h3>{{ judul }}</h3>
+    <img src="{{ thumbnail }}" alt="img" width="50%" , height="30%" class="img-fluid"
+      style="border-radius: 5px;"><br><br>
+    <p><i class="far fa-clock"></i><b> {{waktu}}</b></p>
+    <button type="button" id="mp4-tab" class="btn btn-outline-purple active"><i class="fas fa-video"></i>
+      MP4</button>
+    <button type="button" id="mp3-tab" class="btn btn-outline-purple"><i class="fas fa-music"></i> MP3</button>
+  </div>
+</section>
+
+<!-- ======= MP4 Section ======= -->
+<section id="mp4-section" class="pricing">
+  <div class="container" data-aos="fade-up">
+    <div class="row gy-4">
+
+      {% for resolution, size in fileMP4|dictsort(by='key') %}     
+
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="pricing-item featured">
+          <h3>{{resolution}} Resolution</h3>
+
+          {% if resolution == '144p' %}
+          <ul>
+            <li><i class="bi bi-check"></i> Video jernih</li>
+            <li><i class="bi bi-check"></i> Noise kurang</li>
+            <li class="na"><i class="bi bi-x"></i> <span> Maximum framerate</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span> Frekuensi suara lancar</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span> Favourite resolution</span></li>
+          </ul>
+          <br><a href="{{ url_for('get_mp4', resolusi='144p') }}" class="buy-btn"><i
+              class="fas fa-cloud-download-alt"></i> {{ size }}</a>
+          {% endif %}
+
+          {% if resolution == '240p' %}
+          <ul>
+            <li><i class="bi bi-check"></i> Video jernih</li>
+            <li><i class="bi bi-check"></i> Noise kurang</li>
+            <li class="na"><i class="bi bi-x"></i> <span> Maximum framerate</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span> Frekuensi suara lancar</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span> Favourite resolution</span></li>
+          </ul>
+          <br><a href="{{ url_for('get_mp4', resolusi='240p') }}" class="buy-btn"><i
+              class="fas fa-cloud-download-alt"></i> {{ size }}</a>
+          {% endif %}
+
+          {% if resolution == '360p' %}
+          <ul>
+            <li><i class="bi bi-check"></i> Video jernih</li>
+            <li><i class="bi bi-check"></i> Noise kurang</li>
+            <li><i class="bi bi-check"></i> Maximum framerate</li>
+            <li class="na"><i class="bi bi-x"></i> <span> Frekuensi suara lancar</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span> Favourite resolution</span></li>
+          </ul>
+          <br><a href="{{ url_for('get_mp4', resolusi='360p') }}" class="buy-btn"><i
+              class="fas fa-cloud-download-alt"></i> {{ size }}</a>
+          {% endif %}
+
+          {% if resolution == '480p' %}
+          <ul>
+            <li><i class="bi bi-check"></i> Video jernih</li>
+            <li><i class="bi bi-check"></i> Noise kurang</li>
+            <li><i class="bi bi-check"></i> Maximum framerate</li>
+            <li><i class="bi bi-check"></i>Frekuensi suara lancar</li>
+            <li class="na"><i class="bi bi-x"></i> <span> Favourite resolution</span></li>
+          </ul>
+          <br><a href="{{ url_for('get_mp4', resolusi='480p') }}" class="buy-btn"><i
+              class="fas fa-cloud-download-alt"></i> {{ size }}</a>
+          {% endif %}
+
+          {% if resolution == '720p' %}
+          <ul>
+            <li><i class="bi bi-check"></i> Video jernih</li>
+            <li><i class="bi bi-check"></i> Noise kurang</li>
+            <li><i class="bi bi-check"></i> Maximum framerate</li>
+            <li><i class="bi bi-check"></i> Suara jelas</li>
+            <li><i class="bi bi-check"></i> Favourite resolution</li>
+          </ul>
+          <br><a href="{{ url_for('get_mp4', resolusi='720p') }}" class="buy-btn"><i
+              class="fas fa-cloud-download-alt"></i> {{ size }}</a>
+          {% endif %}
+
+          {% if resolution == '1080p' %}
+          <ul>
+            <li><i class="bi bi-check"></i> Video jernih</li>
+            <li><i class="bi bi-check"></i> Noise kurang</li>
+            <li><i class="bi bi-check"></i> Maximum framerate</li>
+            <li><i class="bi bi-check"></i> Suara jelas</li>
+            <li><i class="bi bi-check"></i> Favourite resolution</li>
+          </ul>
+          <br><a href="{{ url_for('get_mp4', resolusi='1080p') }}" class="buy-btn"><i
+              class="fas fa-cloud-download-alt"></i> {{ size }}</a>
+          {% endif %}
+
+        </div>
+      </div><!-- End Pricing Item -->
+
+      {% endfor %}
+
+    </div>
+  </div>
+</section><!-- End MP4 Section -->
+
+<!-- MP3 Section -->
+<section id="mp3-section" class="pricing" style="display: none;">
+  <div class="container" data-aos="fade-up">
+    <div class="row gy-4">
+      {% for resolution, size in fileMP3 %}
+
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="pricing-item featured">
+          <h3>{{resolution}}</h3>
+
+          {% if resolution == '48kbps' %}
+          <ul>
+            <li><i class="bi bi-check"></i> Noise kurang</li>
+            <li class="na"><i class="bi bi-x"></i> <span> Frekuensi suara lancar</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span> Favourite resolution</span></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <br><a href="{{ url_for('get_mp3', resolusi='48kbps') }}" class="buy-btn"><i
+              class="fas fa-cloud-download-alt"></i> {{ size }}</a>
+          {% endif %}
+
+          {% if resolution == '50kbps' %}
+          <ul>
+            <li><i class="bi bi-check"></i> Noise kurang</li>
+            <li class="na"><i class="bi bi-x"></i> <span> Frekuensi suara lancar</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span> Favourite resolution</span></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <br><a href="{{ url_for('get_mp3', resolusi='50kbps') }}" class="buy-btn"><i
+              class="fas fa-cloud-download-alt"></i> {{ size }}</a>
+          {% endif %}
+
+          {% if resolution == '70kbps' %}
+          <ul>
+            <li><i class="bi bi-check"></i> Noise kurang</li>
+            <li><i class="bi bi-check"></i>Frekuensi suara lancar</li>
+            <li class="na"><i class="bi bi-x"></i> <span> Favourite resolution</span></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <br><a href="{{ url_for('get_mp3', resolusi='70kbps') }}" class="buy-btn"><i
+              class="fas fa-cloud-download-alt"></i> {{ size }}</a>
+          {% endif %}
+
+          {% if resolution == '128kbps' %}
+          <ul>
+            <li><i class="bi bi-check"></i> Noise kurang</li>
+            <li><i class="bi bi-check"></i> Suara jernih</li>
+            <li><i class="bi bi-check"></i>Frekuensi suara lancar</li>
+            <li><i class="bi bi-check"></i>Favourite resolution</li>
+          </ul>
+          <br><a href="{{ url_for('get_mp3', resolusi='128kbps') }}" class="buy-btn"><i
+              class="fas fa-cloud-download-alt"></i> {{ size }}</a>
+          {% endif %}
+
+          {% if resolution == '160kbps' %}
+          <ul>
+            <li><i class="bi bi-check"></i> Noise kurang</li>
+            <li><i class="bi bi-check"></i> Suara jelas</li>
+            <li><i class="bi bi-check"></i>Frekuensi suara lancar</li>
+            <li><i class="bi bi-check"></i> Favourite resolution</li>
+          </ul>
+          <br><a href="{{ url_for('get_mp3', resolusi='160kbps') }}" class="buy-btn"><i
+              class="fas fa-cloud-download-alt"></i> {{ size }}</a>
+          {% endif %}
+
+        </div>
+      </div><!-- End Pricing Item -->
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section><!-- End MP3 Section -->
+{% endblock %}
